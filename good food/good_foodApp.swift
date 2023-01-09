@@ -13,8 +13,9 @@ struct good_foodApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+
+            RootView(recipes: randomRecipeManager())
+          .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
