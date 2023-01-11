@@ -9,11 +9,11 @@ import SwiftUI
 import CoreData
 
 struct RootView: View {
-//    @ObservedObject var SearchBarresult = SearchBarManager()
+    //    @ObservedObject var SearchBarresult = SearchBarManager()
     @StateObject var recipes : randomRecipeManager
     @AppStorage("shouldShowOndoarding")var shouldShowOndoarding: Bool = true
     @State var selectedTab: Tabs = .home
-//    @State private var searchText = ""
+    //    @State private var searchText = ""
     @State var show = false
     
     var body: some View{
@@ -47,17 +47,22 @@ struct RootView: View {
                 } .background(Image("background")
                     .ignoresSafeArea())
                 TabBar(selectedTab: $selectedTab)
-                
+                    .onTapGesture {
+                        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)){
+                            show.toggle()
+                            
+                        }
+                        //            .environmentObject(recipes)
+                    }
             }
-            .environmentObject(recipes)
+            //            .fullScreenCover(isPresented: $shouldShowOndoarding, content: {
+            //                GoodFoodOndoardingView(shouldShowOndoarding: $shouldShowOndoarding)
+            //            })
+            //}
         }
+        
     }
-    //        .fullScreenCover(isPresented: $shouldShowOndoarding, content: {
-    //            GoodFoodOndoardingView(shouldShowOndoarding: $shouldShowOndoarding)
-    //        })
 }
-
-
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {

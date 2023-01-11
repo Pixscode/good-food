@@ -89,7 +89,7 @@ struct RandomRecipeDetailview: View {
     //    }
     var cover: some View{
         ForEach(randomRecipe.recipes?.recipes ?? [],id :\.self){Recipe in
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading,spacing:15) {
                 AsyncImage(url: URL(string: Recipe.image )){ image in
                     image
                         .resizable()
@@ -140,6 +140,7 @@ struct RandomRecipeDetailview: View {
                 
             }
         }
+
     }
 }
 

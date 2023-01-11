@@ -49,7 +49,7 @@ class randomRecipeManager: ObservableObject {
     @Published var recipes: RandomRecipe?
 //    let endpoint = "https://api.spoonacular.com/recipes/random?apiKey=857583577d2a4f08a8a585dc7a556622&number=3"
     let endpoint = "https://api.spoonacular.com/recipes/random?apiKey=a9c72f456a80e4a369757fc5aa07a4acf=1"
-//
+
     init(recipes: RandomRecipe? = nil) {
         self.recipes = recipes
         getUsers()
