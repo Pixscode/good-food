@@ -5,6 +5,7 @@ import Foundation
 //API KEY TWO :https://api.spoonacular.com/recipes/complexSearch?apiKey=acf2fa74bf8943628007634765e25685&query=pasta&maxFat=25&number=2
 
 //5343d891cc7c4168b59995c3dfd44259
+//5343d891cc7c4168b59995c3dfd44259
 
 
 struct SearchModel: Codable {
@@ -30,14 +31,15 @@ class SearchBarManager:ObservableObject{
     @Published var searchResults : SearchModel?
     
 //    var endpoint = "https://api.spoonacular.com/recipes/complexSearch?apiKey=857583577d2a4f08a8a585dc7a556622"
-    var endpoint = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5343d891cc7c4168b59995c3dfd44259"
+    var endpoint = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5343d891cc7c4168b59995c3dfd44259&query="
     init(searchResults: SearchModel? = nil ) {
         self.searchResults = searchResults
         getSearch(searchItem: "")
     }
     
     func getSearch(searchItem : String ){
-        guard let url = URL(string:"https://api.spoonacular.com/recipes/complexSearch?apiKey=5343d891cc7c4168b59995c3dfd44259&query=\(searchItem)") else { fatalError("Missing URL") }
+        var searchText = searchItem.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let url = URL(string:"https://api.spoonacular.com/recipes/complexSearch?apiKey=5343d891cc7c4168b59995c3dfd44259&query=\(searchText)") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 
@@ -54,7 +56,6 @@ class SearchBarManager:ObservableObject{
                     do {
                         let decodedUsers = try JSONDecoder().decode(SearchModel.self, from: data)
                         self.searchResults = decodedUsers
-                        print(decodedUsers)
                     } catch let error {
                         print("Error decoding: ", error)
                     }

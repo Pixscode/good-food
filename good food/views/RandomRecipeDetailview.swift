@@ -9,8 +9,9 @@ import SwiftUI
 
 struct RandomRecipeDetailview: View {
     @Binding var show:Bool
+    var recipe : Recipe 
     //    @EnvironmentObject var recipes: randomRecipeManager
-    @ObservedObject var randomRecipe = randomRecipeManager()
+    @ObservedObject var randomRecipe: randomRecipeManager
     var body: some View {
         ZStack{
             ScrollView{
@@ -88,9 +89,10 @@ struct RandomRecipeDetailview: View {
     //        }
     //    }
     var cover: some View{
-        ForEach(randomRecipe.recipes?.recipes ?? [],id :\.self){Recipe in
+//        ForEach(randomRecipe.recipes?.recipes ?? [],id :\.self){Recipe in
+      
             VStack(alignment: .leading,spacing:15) {
-                AsyncImage(url: URL(string: Recipe.image )){ image in
+                AsyncImage(url: URL(string: recipe.image )){ image in
                     image
                         .resizable()
                         .aspectRatio(1, contentMode: .fill)
@@ -98,14 +100,14 @@ struct RandomRecipeDetailview: View {
                 } placeholder: {
                     ProgressView()
                 }
-                Text(Recipe.title ?? "")
+                Text(recipe.title ?? "")
                     .font(.largeTitle.weight(.bold))
                     .bold()
                     .foregroundColor(.green)
                     .padding(.top,120)
                     .padding(.leading,20)
                 HStack{
-                    Label("\(Recipe.readyInMinutes)", systemImage: "clock.fill")
+                    Label("\(recipe.readyInMinutes)", systemImage: "clock.fill")
                         .font(.title2.weight(.semibold))
                         .foregroundColor(.pink)
                         .frame(maxWidth:.infinity,alignment: .leading)
@@ -134,12 +136,12 @@ struct RandomRecipeDetailview: View {
                     .font(.title)
                     .bold()
                     .padding()
-                Text(Recipe.instructions ?? "")
+                Text(recipe.instructions ?? "")
                     .font(.title3)
                     .padding()
                 
             }
-        }
+//        }
 
     }
 }
@@ -147,6 +149,6 @@ struct RandomRecipeDetailview: View {
 
 struct RandomRecipeDetailview_Previews: PreviewProvider {
     static var previews: some View {
-        RandomRecipeDetailview(show:.constant(true))
+        RandomRecipeDetailview(show:.constant(true), recipe: Recipe(readyInMinutes: 0, servings: 0, image: ""), randomRecipe: randomRecipeManager())
     }
 }

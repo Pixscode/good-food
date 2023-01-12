@@ -11,6 +11,7 @@
 		E58DFB75296B911B0018A31F /* FavoriteDisplayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DFB74296B911B0018A31F /* FavoriteDisplayBar.swift */; };
 		E58E11132965812A00CCDA0B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E11122965812A00CCDA0B /* SearchBar.swift */; };
 		E58E111C2967128200CCDA0B /* RandomRecipeCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E111B2967128200CCDA0B /* RandomRecipeCards.swift */; };
+		E58F0B5C296FDED400E7E950 /* searchItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58F0B5B296FDED400E7E950 /* searchItemCard.swift */; };
 		E591825D2951C79400F57B8D /* good_foodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591825C2951C79400F57B8D /* good_foodApp.swift */; };
 		E591825F2951C79400F57B8D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591825E2951C79400F57B8D /* RootView.swift */; };
 		E59182612951C79A00F57B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59182602951C79A00F57B8D /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		E58DFB74296B911B0018A31F /* FavoriteDisplayBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDisplayBar.swift; sourceTree = "<group>"; };
 		E58E11122965812A00CCDA0B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E58E111B2967128200CCDA0B /* RandomRecipeCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRecipeCards.swift; sourceTree = "<group>"; };
+		E58F0B5B296FDED400E7E950 /* searchItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchItemCard.swift; sourceTree = "<group>"; };
 		E59182592951C79400F57B8D /* good food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "good food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591825C2951C79400F57B8D /* good_foodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = good_foodApp.swift; sourceTree = "<group>"; };
 		E591825E2951C79400F57B8D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; tabWidth = 7; usesTabs = 0; };
@@ -118,6 +120,7 @@
 				E5942FF32967FAA00032016A /* TabBarButton.swift */,
 				E5942FF929688D950032016A /* FavoritesTopBarItem.swift */,
 				E58DFB74296B911B0018A31F /* FavoriteDisplayBar.swift */,
+				E58F0B5B296FDED400E7E950 /* searchItemCard.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				E591825D2951C79400F57B8D /* good_foodApp.swift in Sources */,
 				E59183032964721700F57B8D /* SearchDataManager.swift in Sources */,
 				E5774D9D296B6C5B00FAD3EF /* RandomRecipeDetailview.swift in Sources */,
+				E58F0B5C296FDED400E7E950 /* searchItemCard.swift in Sources */,
 				E5942FFA29688D950032016A /* FavoritesTopBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
