@@ -58,6 +58,7 @@ struct RootView: View {
                             RandomRecipeDetailview(show: $show, recipe: recipes.recipes?.recipes?[0] ?? Recipe(id: 0, title: "", readyInMinutes: 0, servings: 0, image: "", instructions: ""), randomRecipe: recipes)
                         }
                     }
+                
                     
                     
                                     Spacer()

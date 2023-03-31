@@ -10,7 +10,6 @@ import SwiftUI
 struct RandomRecipeDetailview: View {
     @Binding var show:Bool
     var recipe : Recipe 
-    //    @EnvironmentObject var recipes: randomRecipeManager
     @ObservedObject var randomRecipe: randomRecipeManager
     var body: some View {
         ZStack{
@@ -40,57 +39,8 @@ struct RandomRecipeDetailview: View {
         
     }
     
-    //    var cover: some View{
-    //        VStack(alignment: .leading,spacing: 15) {
-    //            Image("supper")
-    //                .resizable()
-    //                .aspectRatio(1, contentMode: .fill)
-    //                .frame(maxWidth: 600,maxHeight: 200)
-    //            Text("poko ball with chicken and corn")
-    //                .font(.largeTitle.weight(.bold))
-    //                .bold()
-    //                .foregroundColor(.green)
-    //                .padding(.top,120)
-    //                .padding(.leading,20)
-    //            HStack{
-    //                Label("10min",systemImage: "clock.fill")
-    //                    .font(.title2.weight(.semibold))
-    //                    .foregroundColor(.pink)
-    //                    .frame(maxWidth:.infinity,alignment: .leading)
-    //                    .labelStyle(.titleAndIcon)
-    //                    .padding(.leading,15)
-    //                    .padding(.top,2)
-    //                Spacer()
-    //                Image(systemName: "heart")
-    //                    .resizable()
-    //                    .aspectRatio( contentMode: .fit)
-    //                    .frame(width: 35,height: 35)
-    //                    .padding(.trailing,60)
-    //                    .foregroundColor(.pink)
-    //            }
-    //            Text("Ingredients Need")
-    //                .foregroundColor(.black)
-    //                .font(.title)
-    //                .bold()
-    //                .padding()
-    //            Text("ingredients list here")
-    //                .font(.title3)
-    //                .padding()
-    //            Text("Lets Start Cooking ")
-    //
-    //                .foregroundColor(.black)
-    //                .font(.title)
-    //                .bold()
-    //                .padding()
-    //            Text("how to make goes here ")
-    //                .font(.title3)
-    //                .padding()
-    //
-    //        }
-    //    }
     var cover: some View{
-//        ForEach(randomRecipe.recipes?.recipes ?? [],id :\.self){Recipe in
-      
+
             VStack(alignment: .leading,spacing:15) {
                 AsyncImage(url: URL(string: recipe.image )){ image in
                     image

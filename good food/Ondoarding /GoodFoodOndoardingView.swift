@@ -59,27 +59,30 @@ struct welcomePage:View {
                 .aspectRatio(contentMode: .fit)
                .frame(width: 150,height: 150)
     
-           
-            Text("Happy Cooking")
-                .font(.system(size:70))
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 30.0)
-            
-            if showDismissButton { Button(
-                action: {
-                    shouldShowOndoarding.toggle()
-                    //some code
-                },label: {
-                    Text("Get Started")
-                        .frame(width: 250,height: 50)
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color.white)
-                        .background(Color(.blue))
-                        .cornerRadius(6)
-                    
-                }
-            )}
+            HStack{
+                Text("Happy Cooking")
+                    .font(.system(size:70))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 30.0)
+            }
+            HStack{
+                if showDismissButton { Button(
+                    action: {
+                        shouldShowOndoarding.toggle()
+                        //some code
+                    },label: {
+                        Text("Get Started")
+                            .frame(width: 250,height: 50)
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(Color.white)
+                            .background(Color(.blue))
+                            .cornerRadius(6)
+                        
+                    }
+                )}
+                
+            }
             
             
           

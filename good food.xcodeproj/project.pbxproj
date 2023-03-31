@@ -29,6 +29,7 @@
 		E5942FF829684EB90032016A /* DetailInforManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5942FF729684EB90032016A /* DetailInforManager.swift */; };
 		E5942FFA29688D950032016A /* FavoritesTopBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5942FF929688D950032016A /* FavoritesTopBarItem.swift */; };
 		E59A8C77296B7CC900E03E69 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A8C76296B7CC900E03E69 /* FavoritesView.swift */; };
+		E5B4CF9C299F801900B8D22F /* login sceen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4CF9B299F801900B8D22F /* login sceen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E5942FF729684EB90032016A /* DetailInforManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInforManager.swift; sourceTree = "<group>"; };
 		E5942FF929688D950032016A /* FavoritesTopBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTopBarItem.swift; sourceTree = "<group>"; };
 		E59A8C76296B7CC900E03E69 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		E5B4CF9B299F801900B8D22F /* login sceen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "login sceen.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E591828C2951E0CE00F57B8D /* GoodFoodOndoardingView.swift */,
+				E5B4CF9B299F801900B8D22F /* login sceen.swift */,
 			);
 			path = "Ondoarding ";
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				E591828D2951E0CE00F57B8D /* GoodFoodOndoardingView.swift in Sources */,
 				E58DFB75296B911B0018A31F /* FavoriteDisplayBar.swift in Sources */,
 				E59182662951C79A00F57B8D /* Persistence.swift in Sources */,
+				E5B4CF9C299F801900B8D22F /* login sceen.swift in Sources */,
 				E5942FF22967DE9B0032016A /* TabBar.swift in Sources */,
 				E5942FF42967FAA00032016A /* TabBarButton.swift in Sources */,
 				E591825F2951C79400F57B8D /* RootView.swift in Sources */,
